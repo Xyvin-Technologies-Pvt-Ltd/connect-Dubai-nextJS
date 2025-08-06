@@ -33,7 +33,8 @@ const Body = () => {
             <div></div>
           </div>
           <div className="w-[30%]">
-            <div>
+            <div> 
+              
 <Image
  src="/Rectangle.png"
   alt="Banner"
