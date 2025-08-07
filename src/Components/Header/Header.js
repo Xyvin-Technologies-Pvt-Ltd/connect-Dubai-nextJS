@@ -2,7 +2,18 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { ArrowRight, Menu, X } from "lucide-react";
+import { Plus_Jakarta_Sans } from 'next/font/google';
 
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['500',], // Choose what you need
+  variable: '--font-plus-jakarta',
+});
+const navHeader = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['600',], // Choose what you need
+  variable: '--font-plus-jakarta',
+});
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -21,7 +32,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Center Nav */}
-        <nav className="hidden md:flex gap-4 lg:gap-6 text-sm lg:text-base">
+        <nav className={`${navHeader.variable} tracking-tighter hidden md:flex gap-4 lg:gap-6  text-sm lg:text-base`}>
           <a href="#" className="hover:underline">
             Home
           </a>
@@ -40,9 +51,9 @@ const Header = () => {
         </nav>
 
         {/* Right Side (Join button + Mobile Menu Toggle) */}
-        <div className="flex items-center gap-4">
-          <button className="hidden md:flex items-center gap-3 border-[#002B21] border-2 text-[#002B21] bg-white px-6 py-2 rounded-full text-sm md:text-base">
-            <span className="font-medium">Join Community</span>
+        <div className="flex items-cente gap-">
+          <button className="hidden px-3  md:flex items-center gap-2 border-[#002B21] border-1 text-[#002B21] bg-white px- py-2 rounded-full text-sm md:text-sm">
+            <span className={`${jakarta.variable} `}>Join Community</span>
             <span className="text-white bg-[#002B21] p-1.5 rounded-full">
               <ArrowRight size={16} />
             </span>

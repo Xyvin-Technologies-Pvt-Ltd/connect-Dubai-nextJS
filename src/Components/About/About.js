@@ -1,6 +1,22 @@
 import React from "react";
 import Image from "next/image";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
+const jakartaFour = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400"], // 👈 Only include 700 for bold
+  variable: "--font-plus-jakarta",
+});
+const jakartaFive = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["500"], // 👈 Only include 700 for bold
+  variable: "--font-plus-jakarta",
+});
+const jakartaEight = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["800"], // 👈 Only include 700 for bold
+  variable: "--font-plus-jakarta",
+});
 const About = () => {
   const cards = [
     {
@@ -45,24 +61,38 @@ const About = () => {
             height={18}
             className="object-contain"
           />
-          <span>About</span>
+          <span
+            style={{ letterSpacing: "-.32px" }}
+            className={`${jakartaFour.variable}`}
+          >
+            About
+          </span>
         </button>
 
         {/* Heading */}
         <div className="mt-6 text-center">
-          <h1 className="font-extrabold font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+          <h1
+            style={{ letterSpacing: "-1.5px" }}
+            className={` ${jakartaEight.variable} text-3xl sm:text-4xl md:text-5xl lg:text-6xl`}
+          >
             A Smart Digital Platform for{" "}
-            <span className="bg-gradient-to-r from-yellow-800 to-yellow-200 bg-clip-text text-transparent">
+            <span
+              style={{ letterSpacing: "-1.5px" }}
+              className={`${jakartaEight.variable} bg-gradient-to-r from-yellow-800 to-yellow-200 bg-clip-text text-transparent`}
+            >
               UAE-
             </span>
           </h1>
-          <h1 className="font-bold font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2 bg-gradient-to-r from-yellow-800 to-yellow-200 bg-clip-text text-transparent">
+          <h1
+            style={{ letterSpacing: "-1.5px" }}
+            className={`${jakartaEight.variable}  text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2 bg-gradient-to-r from-yellow-800 to-yellow-200 bg-clip-text text-transparent`}
+          >
             Based Businesses
           </h1>
         </div>
 
         {/* Subheading */}
-        <p className="mt-6 text-center font-light text-base sm:text-lg md:text-xl max-w-3xl">
+        <p style={{ letterSpacing: "-.18px" }} className={`${jakartaFive.variable} mt-6 text-center text-base sm:text-lg md:text-md max-w-3xl`}>
           Connect Dubai is a digital-first ecosystem where businesses,
           communities, and customers meet. Whether you sell products or offer
           services, our platform helps you:
@@ -74,7 +104,7 @@ const About = () => {
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-white rounded-xl  "
               >
                 <div className="flex items-center justify-center h-24 w-full">
                   <Image
@@ -107,7 +137,12 @@ const About = () => {
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <Image src="/Magnifier.png" alt="Magnifier" width={26} height={26} />
+            <Image
+              src="/Magnifier.png"
+              alt="Magnifier"
+              width={26}
+              height={26}
+            />
             <p className="text-gray-700 font-medium text-sm sm:text-base">
               Currently under active development
             </p>

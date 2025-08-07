@@ -1,9 +1,15 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
-      colors: {
-        gold: "#F9D78D", // give it a name like 'sand'
+      fontFamily: {
+        jakarta: ['var(--font-plus-jakarta)', 'sans-serif'],
       },
     },
   },
-};
+  plugins: [],
+}

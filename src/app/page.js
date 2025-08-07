@@ -1,5 +1,6 @@
 import About from "@/Components/About/About";
 import Body from "@/Components/BodyContents/Body";
+import Footer from "@/Components/Footer/Footer";
 import Header from "@/Components/Header/Header";
 import PopUpInHeader from "@/Components/Header/PopUpInHeader";
 import LetsConnect from "@/Components/LetsConnect/LetsConnect";
@@ -21,6 +22,7 @@ export default function Home() {
       <WhyJoinNow />
       <UpcomingFeatures />
       <LetsConnect/>
+      <Footer/>
     </div>
   );
 }
