@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+
 const About = () => {
   const cards = [
     {
@@ -31,104 +32,85 @@ const About = () => {
       image: "/Icon Content (4).png",
     },
   ];
+
   return (
-    <div>
-      <div className="w-full flex flex-col items-center pt-8 justify-cente ">
-        <div className="w-[1100px] flex flex-col items-center ">
-          <div>
-            <button className="border-2 border-[#E6E6E6] justify-center gap-1 flex items-center border-dashed rounded-full px-4 py-2">
-              <Image
-                src="/Icon.png"
-                alt="Banner"
-                width={15}
-                height={15}
-                //  fill
-                className=" object-cover"
-              />{" "}
-              <span> About</span>
-            </button>
-          </div>
-          <div className="mt-3">
-            <span className="font-extrabold text-cente font-sans text-6xl">
-              A Smart Digital Platform for
-            </span>
-            <span className="px-6 font-bold mt-4 font-sans text-6xl bg-gradient-to-r from-yellow-800 to-yellow-200 bg-clip-text text-transparent">
+    <div className="w-full flex flex-col items-center pt-8 px-4">
+      <div className="w-full max-w-[1200px] flex flex-col items-center">
+        {/* About button */}
+        <button className="border-2 border-[#E6E6E6] justify-center gap-2 flex items-center border-dashed rounded-full px-4 py-2 text-sm sm:text-base">
+          <Image
+            src="/Icon.png"
+            alt="About Icon"
+            width={18}
+            height={18}
+            className="object-contain"
+          />
+          <span>About</span>
+        </button>
+
+        {/* Heading */}
+        <div className="mt-6 text-center">
+          <h1 className="font-extrabold font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+            A Smart Digital Platform for{" "}
+            <span className="bg-gradient-to-r from-yellow-800 to-yellow-200 bg-clip-text text-transparent">
               UAE-
             </span>
-          </div>
-          <div className="mt-3">
-            <span className="px-6 font-bold mt-4 font-sans text-6xl bg-gradient-to-r from-yellow-800 to-yellow-200 bg-clip-text text-transparent">
-              Based Businesses
-            </span>
-          </div>
-          <div className="mt-3">
-            <h1 className="text-center font-light text-2xl">
-              Connect Dubai is a digital-first ecosystem where businesses,
-              communities, and customers meet. Whether you sell products or
-              offer services, our platform helps you:
-            </h1>
-          </div>{" "}
-          <div>
-            <div className="p-4 mt-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12">
-                {cards.map((card, index) => (
-                  <div
-                    key={index}
-                    className="bg-white rounded-xl  overflow-hidden hover:shadow-lg transition-shadow duration-300"
-                  >
-                    <div className="relative  h-20 flex items-center justify-center w-full">
-                      <Image
-                        src={card.image}
-                        // alt={card.title}
-                        width={60}
-                        height={10}
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-4">
-                      <h2 className="text-md text-center font-semibold">
-                        {card.heading}
-                      </h2>
-                      <p className="text-gray-600 text-center text-sm mt-2">
-                        {card.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="">
-            <div className="mt-8 border-2 gap-4 flex items-center justify-center border-dashed border-[#E6E6E6] rounded-full px-4 py-2 text-center ">
-              <div className="flex items-center">
-                <div className=" flex items-center h-10 ">
+          </h1>
+          <h1 className="font-bold font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2 bg-gradient-to-r from-yellow-800 to-yellow-200 bg-clip-text text-transparent">
+            Based Businesses
+          </h1>
+        </div>
+
+        {/* Subheading */}
+        <p className="mt-6 text-center font-light text-base sm:text-lg md:text-xl max-w-3xl">
+          Connect Dubai is a digital-first ecosystem where businesses,
+          communities, and customers meet. Whether you sell products or offer
+          services, our platform helps you:
+        </p>
+
+        {/* Cards */}
+        <div className="p-4 mt-8 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            {cards.map((card, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="flex items-center justify-center h-24 w-full">
                   <Image
-                    src="/Calendar.png"
-                    // alt={card.title}
-                    width={26}
-                    height={10}
-                    className="object-cover"
+                    src={card.image}
+                    alt={card.heading}
+                    width={60}
+                    height={60}
+                    className="object-contain"
                   />
                 </div>
-                <p className="text-gray-700 font-medium">
-                  Launch Expected: 08/ 2025
-                </p>
-              </div>
-              <div className="flex items-center">
-                <div className=" flex items-center h-10 ">
-                  <Image
-                    src="/Magnifier.png"
-                    // alt={card.title}
-                    width={26}
-                    height={10}
-                    className="object-cover"
-                  />
+                <div className="p-4">
+                  <h2 className="text-md text-center font-semibold">
+                    {card.heading}
+                  </h2>
+                  <p className="text-gray-600 text-center text-sm mt-2">
+                    {card.description}
+                  </p>
                 </div>
-                <p className="text-gray-700 font-medium">
-                  Currently under active development
-                </p>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom Info Section */}
+        <div className="mt-10 border-2 border-dashed border-[#E6E6E6] rounded-full px-6 py-4 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+          <div className="flex items-center gap-2">
+            <Image src="/Calendar.png" alt="Calendar" width={26} height={26} />
+            <p className="text-gray-700 font-medium text-sm sm:text-base">
+              Launch Expected: 08/2025
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            <Image src="/Magnifier.png" alt="Magnifier" width={26} height={26} />
+            <p className="text-gray-700 font-medium text-sm sm:text-base">
+              Currently under active development
+            </p>
           </div>
         </div>
       </div>
