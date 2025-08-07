@@ -35,6 +35,7 @@ const Body = () => {
               </h1>
               <Image
                 src="/images/Icon Stack → Icon 1 (1).png"
+                alt={"icon"}
                 width={70}
                 height={60}
                 className="object-contain pt-6"

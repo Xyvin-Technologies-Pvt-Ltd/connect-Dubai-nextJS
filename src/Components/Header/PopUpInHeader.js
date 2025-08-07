@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const PopUpInHeader = () => {
   return (
-    <div className=" w-full bg-[#002B21] md:h-[75px] h-10 flex items-center justify-center ">
+    <div className="w-full bg-[#002B21] md:h-[75px] h-10 flex items-center justify-center">
       <div className="flex items-center justify-center">
          <Image
                   src="/images/Vector.png"
