@@ -11,7 +11,7 @@ const PopUpInHeader = () => {
                   height={10}
                   className="object-cover"
                 />
-        <h1 className="text-sm font-inter font-normal sm:text-base md:text-lg lg:text-lg text-white font-boldtext-center px-4">
+        <h1 className="text-sm  font-normal sm:text-base md:text-lg lg:text-lg text-white font-boldtext-center px-4">
           Explore your next move with Connect Dubai !
         </h1>
       </div>
