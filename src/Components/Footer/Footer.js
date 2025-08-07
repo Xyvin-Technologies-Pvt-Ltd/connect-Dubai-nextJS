@@ -38,21 +38,21 @@ const Footer = () => {
           <div className="max-w-[633px] w-full">
             <div className="flex gap-6 md:gap-10 items-center justify-center">
               <div className="h-[1px] w-[140px] bg-gradient-to-r from-white/10  to-white/20"></div>
-              <h2 className="text-white whitespace-nowrap">Let's Connect</h2>
+              <h2 className="text-white whitespace-nowrap">Let&apos;s Connect</h2>
               <div className="h-[1px] w-[140px] bg-gradient-to-r from-white/10  to-white/20"></div>
             </div>
             <h1 className="font-jakarta text-[32px] md:text-[40px] font-medium text-white mt-4">
-              Let’s build
+              Let&apos;s build
             </h1>
             <h1 className="font-jakarta text-[32px] md:text-[40px] font-medium text-white">
-              Dubai’s future, together.
+              Dubai&apos;s future, together.
             </h1>
             <p className="font-jakarta text-[12px] font-thin text-white mt-2">
-              We’re empowering UAE-based businesses with digital tools that
+              We&apos;re empowering UAE-based businesses with digital tools that
               connect, grow, and thrive
             </p>
             <p className="font-jakarta text-[12px] font-thin text-white">
-              Let’s talk about how Connect Dubai can support your vision.
+              Let&apos;s talk about how Connect Dubai can support your vision.
             </p>
           </div>
         </div>
